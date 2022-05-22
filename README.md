@@ -1,4 +1,4 @@
-# Nut.js Demos
+# Nut.js Tests
 
 - https://github.com/nut-tree/nut.js/issues/264
 
