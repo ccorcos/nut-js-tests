@@ -1,34 +1,22 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import { AppState, newGame } from "./AppState"
-import { App } from "./components/App"
-import { Environment, EnvironmentProvider } from "./Environment"
-
-// Build the environment.
-let initialGame = newGame()
-try {
-	const game = JSON.parse(localStorage.getItem("state")!)
-	if (game) initialGame = game
-} catch (error) {}
-
-const app = new AppState(initialGame)
-app.addListener(() => {
-	localStorage.setItem("state", JSON.stringify(app.state))
+document.addEventListener("keydown", (event) => {
+	console.log(
+		"keydown",
+		event.key,
+		event.shiftKey,
+		event.metaKey,
+		event.altKey,
+		event.ctrlKey
+	)
 })
 
-const environment: Environment = { app }
+document.addEventListener("click", (event) => {
+	console.log("click", event.metaKey)
+})
 
-// Render the app.
-const root = document.createElement("div")
-document.body.appendChild(root)
+document.addEventListener("keydown", (event) => {
+	console.log("keydown", event.key, event.metaKey)
+})
 
-ReactDOM.render(
-	<EnvironmentProvider value={environment}>
-		<App />
-	</EnvironmentProvider>,
-	root
-)
-
-// For debugging from the Console.
-;(window as any)["environment"] = environment
-Object.assign(window as any, environment)
+document.addEventListener("keyup", (event) => {
+	console.log("keyup", event.key, event.metaKey)
+})

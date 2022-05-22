@@ -1,34 +1,19 @@
-# TypeScript Boilerplate [Live Demo](https://ccorcos.github.io/typescript-boilerplate/s)
+# Nut.js Demos
 
-A minimal boilerplate for building and deploying websites to Github Pages.
+- https://github.com/nut-tree/nut.js/issues/264
 
-**Features**
-- React
-- [Estrella](https://github.com/rsms/estrella) (combines ESBuild with TypeScript)
-- Livereload (development server)
-- Deploy to Github Pages
-- Environment and StateMachine architecture (if you want)
+	1. `npm start`
+	2. Open up the dev console.
+	3. `./node_modules/.bin/ts-node src/nut264.ts`
+	4. You have two seconds to click on the window.
+	5. Make sure modifier keys work.
 
-## Development
 
-```sh
-git clone git@github.com:ccorcos/typescript-boilerplate.git project
-cd project
-git remote remove origin
-npm install
-npm start
-```
+- https://github.com/nut-tree/nut.js/issues/273
 
-## Deploy
+	1. `npm start`
+	2. Open up the dev console.
+	3. `./node_modules/.bin/ts-node src/nut273.ts`
+	4. You have two seconds to click on the window.
+	5. Make sure cmd+click works.
 
-```sh
-# Note: this will build and commit changes to your local branch.
-npm run release
-```
-
-## Architecture
-
-- No side-effects at the top level except for index.tsx.
-- External effects interface through services defined on the Environment.
-- The Environment is plumbed around everywhere.
-- StateMachine is a Redux-style state management abstraction with less boilerplate.
